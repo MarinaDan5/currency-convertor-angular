@@ -1,0 +1,77 @@
+<!-- <div class="py-4 px-6 border rounded flex items-center flex-col mb2">
+  <h2>Конвертор валют</h2>
+</div> -->
+<!-- <div class="panel">
+  <div class="form-inline">
+      <form action="" class="needs-validation">
+    <div class="form-group">
+ 
+      <div class="col-sm-6" >
+        <label class="form-label" for="currency-type">Currency Value</label>
+        
+        <select #currentFrom name="currency-type" class="form-select"  (change)="onSelectedFrom(currentFrom.value)">
+          <option default></option>
+          <option
+            *ngFor="let curr of currencys let i=index"
+            [value]="curr.ccy"
+          >{{curr.ccy}}</option>
+        </select>
+        <input type="number" class="form-control" (input)="onChangeFrom($event)" [ngModel]="currentFromValue"/>
+      </div>
+
+      <div class="col-sm-6" >
+          <label class="form-label" for="currency-type">Change Value</label>
+        <select #currentTo name="currency-type" class="form-select"  (input)="onSelectedTo(currentTo.value)">
+          <option default></option>
+          <option
+            *ngFor="let curr of currencys let i=index"
+            [value]="curr.ccy"
+          >{{curr.ccy}}</option>
+        </select>
+        <input type="number" class="form-control" (input)="onChangeTo($event)" [ngModel]="currentToValue"/>
+      </div>
+
+    </div>
+    </form>
+
+  </div>
+</div> -->
+
+
+
+
+<div class="row col-sm-12 col-md-8 col-md-offset-2 col-lg-6 ">
+  <h1 class="text-center">Конвертер валют</h1>
+  <br>
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class=" col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+      <div class="form-group ">
+        <label class="sr-only" for="Currency Value">Currency Value</label>
+        <div class="input-group  ">          
+          <select #currentFrom name="currency-type" class="form-control" (change)="onSelectedFrom(currentFrom.value)">
+                <option selected>Оберіть валюту</option>
+            <option *ngFor="let curr of currencys let i=index" [value]="curr.ccy">{{curr.ccy}}</option>
+          </select>
+          <input type="number" class="form-control" id="amounta" placeholder="Amount" (input)="onChangeFrom($event)"
+            [ngModel]="currentFromValue" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+      <div class="form-group">
+        <label class="sr-only" for="Change Value">Change Value</label>
+        <div class="input-group  ">
+            <select #currentTo name="currency-type" class="form-control " (input)="onSelectedTo(currentTo.value)">
+    <option selected>Оберіть валюту</option>
+              <option  *ngFor="let curr of currencys let i=index" [value]="curr.ccy">{{curr.ccy}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount" (input)="onChangeTo($event)"
+              [ngModel]="currentToValue" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

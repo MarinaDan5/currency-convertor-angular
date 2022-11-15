@@ -1,0 +1,43 @@
+<!-- <div class="panel">
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <th>Валюта</th>
+      <th>Купівля</th>
+      <th>Продаж</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let currency of currencys | slice:0:2">
+      <td>{{currency.ccy}}</td>
+      <td>{{currency.buy}}</td>
+      <td>{{currency.sale}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div> -->
+
+
+<div class="row col-sm-12 col-md-8 col-md-offset-2 col-lg-6 ">
+  <h1 class="text-center">Курс валют</h1>
+    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th>Валюта</th>
+          <th>Купівля</th>
+          <th>Продаж</th>
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let currency of currencys | slice:0:2">
+          <td>{{currency.ccy}}</td>
+          <td>{{currency.buy}}</td>
+          <td>{{currency.sale}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
